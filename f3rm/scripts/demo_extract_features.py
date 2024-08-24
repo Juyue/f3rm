@@ -50,4 +50,9 @@ def demo_extract_features():
 
 
 if __name__ == "__main__":
+    import debugpy
+    port = 5700
+    debugpy.listen(address=("localhost", port))
+    print(f"Now is a good time to attach your debugger: Run: Python: Attach {port}")
+    debugpy.wait_for_client()
     demo_extract_features()

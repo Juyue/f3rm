@@ -131,7 +131,7 @@ def load(
         model_path = name
     else:
         raise RuntimeError(f"Model {name} not found; available models = {available_models()}")
-
+    
     with open(model_path, 'rb') as opened_file:
         try:
             # loading JIT archive
